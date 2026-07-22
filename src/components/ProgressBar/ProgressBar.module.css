@@ -1,0 +1,29 @@
+.wrap {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  background: var(--card);
+  border-radius: 12px;
+  padding: 16px 20px;
+  border: 1px solid var(--line);
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+.barBg {
+  background: #232833;
+  border-radius: 8px;
+  height: 10px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.barFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-done));
+  transition: width 0.4s ease;
+}

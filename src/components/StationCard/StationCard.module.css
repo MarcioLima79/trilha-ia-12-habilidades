@@ -1,0 +1,169 @@
+.station {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 18px;
+}
+
+.stationHead {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  cursor: pointer;
+  padding: 14px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  transition: border-color 0.2s;
+}
+
+.stationHead:hover {
+  border-color: var(--accent);
+}
+
+.station.done .stationHead {
+  border-color: var(--accent-done);
+}
+
+.dot {
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border: 2px solid var(--bg);
+}
+
+.station:not(.done) .dot {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.station.done .dot {
+  background: var(--accent-done);
+  color: var(--bg);
+}
+
+.station.tier1:not(.done) .dot {
+  background: var(--tier1);
+}
+
+.station.tier2:not(.done) .dot {
+  background: var(--tier2);
+}
+
+.station.tier3:not(.done) .dot {
+  background: var(--tier3);
+}
+
+.station.tier1:not(.done) .stationHead:hover {
+  border-color: var(--tier1);
+}
+
+.station.tier2:not(.done) .stationHead:hover {
+  border-color: var(--tier2);
+}
+
+.station.tier3:not(.done) .stationHead:hover {
+  border-color: var(--tier3);
+}
+
+.stationTitle {
+  flex: 1;
+}
+
+.stationTitle h2 {
+  font-size: 1.05rem;
+  margin: 0 0 2px;
+}
+
+.stationTitle span {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+.chevron {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  padding-top: 6px;
+  transition: transform 0.2s;
+}
+
+.station.open .chevron {
+  transform: rotate(90deg);
+}
+
+.stationBody {
+  display: none;
+  padding: 18px 18px 18px 62px;
+  background: #12151b;
+  border: 1px solid var(--line);
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  margin-top: -4px;
+}
+
+.station.open .stationBody {
+  display: block;
+}
+
+.stationBody h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-dim);
+  margin: 16px 0 8px;
+}
+
+.stationBody h3:first-child {
+  margin-top: 0;
+}
+
+.stationBody ul {
+  margin: 0 0 8px;
+  padding-left: 20px;
+}
+
+.stationBody li {
+  margin-bottom: 6px;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.projectBox {
+  background: #1c2129;
+  border-left: 3px solid var(--accent);
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+.criteriaBox {
+  background: #16241c;
+  border-left: 3px solid var(--accent-done);
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+.markBtn {
+  margin-top: 14px;
+  background: var(--line);
+  color: var(--text);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.station.done .markBtn {
+  background: var(--accent-done);
+  color: var(--bg);
+}
